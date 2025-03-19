@@ -7,9 +7,7 @@
     "jsx": "react",
     "lib": ["es2017"],
     "moduleResolution": "node",
-    "noEmit": true,
     "strict": true,
-    "target": "esnext"
   },
   "exclude": [
     "node_modules",

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import IconArrow from "../../assets/icon-rightArrow.svg";
 
-type ButtonProps = {
+interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   borderColor: string;
@@ -10,7 +10,7 @@ type ButtonProps = {
   backgroundColorHover: string;
   backgroundColorActive: string;
   iconRight?: boolean;
-};
+}
 
 const WrapperDialogButtonA = styled.button<ButtonProps>`
   width: 100%;
@@ -63,9 +63,7 @@ const Button: React.FC<ButtonProps> = ({
       backgroundColorHover={backgroundColorHover}
     >
       {children}
-      {iconRight && (
-        <ImgIcon src={IconArrow} alt="actionArrow" className="action-arrow" />
-      )}
+      {iconRight && <ImgIcon src={IconArrow} alt="actionArrow" />}
     </WrapperDialogButtonA>
   );
 };
