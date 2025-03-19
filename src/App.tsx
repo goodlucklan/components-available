@@ -1,5 +1,7 @@
-import { Button } from "./components";
+import { useState } from "react";
+import { Button, Input } from "./components";
 function App() {
+  const [valueInput, setValueInput] = useState("");
   return (
     <>
       <Button
@@ -10,6 +12,11 @@ function App() {
       >
         <span>Test button</span>
       </Button>
+      <Input
+        value={valueInput}
+        onChange={(e) => setValueInput(e.target.value)}
+        placeholder="Ingrese el texto"
+      />
     </>
   );
 }
